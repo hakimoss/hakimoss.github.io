@@ -14,7 +14,7 @@ body {
 #container_btn {
    
     position: relative;
-    top: 500px;  
+    top : 200px;  
 }
 
 button{
@@ -34,7 +34,7 @@ button{
     position: relative;
     display: flex;
     justify-content: space-around;
-    top: 520px;
+    bottom: 50px;
     left: 18px;
 }
 
@@ -46,4 +46,13 @@ h2 {
     position: relative;  
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3em;
+}
+#btn_random_box {
+    position: relative;
+    top: 335px;
+}
+
+#random_colore {
+    position: relative;
+    top: 350px;
 }

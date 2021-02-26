@@ -1,46 +1,19 @@
-/*
 
-let btn = document.getElementById("btn_color");
-btn.addEventListener('click', fonctionBtn);
+let btnRandomBox = document.getElementById("btn_random_box");
+btnRandomBox.addEventListener('click', randomBtnFuntion)
 
-let valeur = document.getElementById("valeur");
+let final_random_box;
 
-function fonctionBtn(){
-    let random1 = Math.floor(Math.random() * 9);
-    let random2 = Math.floor(Math.random() * 9);
-    let random3 = Math.floor(Math.random() * 9);
-    let random4 = Math.floor(Math.random() * 9);
-    let random5 = Math.floor(Math.random() * 9);
-
-    let final = "#F" + random1 + random2 + random3 + random4 + random5;
+function randomBtnFuntion(){
     
-    document.body.style.backgroundColor = final;
-    valeur.innerText = final;
+
+    let random_box_math = Math.floor(Math.random() * 2);
     
-}
-*/
-
-let btn = document.getElementById("btn_color");
-btn.addEventListener('click', fonctionBtn);
-
-let valeur = document.getElementById("valeur");
-
-function fonctionBtn(length = 6){
-   
-    let chart = "ABCDEF0123456789";
-    
-    let str = "#";
-
-    let chartLength = chart.length;
-
-    for (let i = 0; i < length; i++){
-        str += chart.charAt(Math.floor(Math.random() * chartLength))
-        
-    }  
-    return str;
-    
+    if (random_box_math === 1){
+        window.open("https://hakimoss.github.io/random_image/index.html", "_self")
+    } else {
+        window.open("https://hakimoss.github.io/random_color/index.html", "_self")
+    }
 }
 
-fonctionBtn(6);
-document.body.style.backgroundColor = fonctionBtn();
-valeur.innerText = fonctionBtn()
+
