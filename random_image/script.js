@@ -38,9 +38,9 @@ function randomBtnFuntion(){
     let random_box_math = Math.floor(Math.random() * 2);
     
     if (random_box_math === 1){
-        final_random_box = window.open("/index.html", "_self")
+        window.open("https://hakimoss.github.io/random_image/index.html", "_self")
     } else {
-        final_random_box = window.open("random_color/index.html", "_self")
+        window.open("https://hakimoss.github.io/random_color/index.html", "_self")
     }
 }
 
