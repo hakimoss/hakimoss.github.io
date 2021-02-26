@@ -11,19 +11,6 @@ function functionRandomImage(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // btn randome box
 
 
@@ -38,9 +25,9 @@ function randomBtnFuntion(){
     let random_box_math = Math.floor(Math.random() * 2);
     
     if (random_box_math === 1){
-        window.open("https://hakimoss.github.io/random_image/index.html", "_self")
+        window.location.replace("https://hakimoss.github.io/random_image/index.html")
     } else {
-        window.open("https://hakimoss.github.io/random_color/index.html", "_self")
+        window.location.replace("https://hakimoss.github.io/random_color/index.html")
     }
 }
 
