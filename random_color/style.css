@@ -11,13 +11,15 @@ body {
     align-items: center;     
 }
 
+/*                    button                       */
+
 #container_btn {
    
     position: relative;
     top : 200px;  
 }
 
-button{
+#btn_hex, #btn_rgb, #btn_random_box {
     width: 400px;
     height: 160px;
     position: relative;
@@ -28,6 +30,33 @@ button{
     box-shadow: 5px 5px 7px 1px rgb(41, 41, 41);
     margin: 2px;
 }
+
+#btn_random_box {
+    position: relative;
+    top: 500px;
+}
+
+#random_colore {
+    position: relative;
+    top: 350px;
+}
+
+#btn_retour{
+    width: 100px;
+    height: 35px;
+    position: relative;
+    display: inline-block;
+    border-radius: 3px;  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    box-shadow: 1px 1px 7px 0px rgb(41, 41, 41);
+    margin: 2px;
+    align-self: flex-end;
+    right: 140px;
+    bottom: 75px;
+}
+
+/*                    titre                       */
 
 #container_valeur{
     width: 800px;
@@ -46,13 +75,4 @@ h2 {
     position: relative;  
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3em;
-}
-#btn_random_box {
-    position: relative;
-    top: 500px;
-}
-
-#random_colore {
-    position: relative;
-    top: 350px;
 }

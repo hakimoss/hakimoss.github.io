@@ -69,4 +69,13 @@ function randomBtnFuntion(){
     }
 }
 
+// bouton retour
+
+let btnRetour = document.getElementById("btn_retour");
+btnRetour.addEventListener('click', btnRetourFunction)
+
+function btnRetourFunction(){
+    window.location.replace("https://hakimoss.github.io/")
+}
+
 

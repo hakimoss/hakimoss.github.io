@@ -17,7 +17,9 @@ body {
     top: 500px;  
 }
 
-button{
+/*                      button                              */
+
+#btn_random_image, #btn_random_box{
     width: 400px;
     height: 160px;
     position: relative;
@@ -29,13 +31,28 @@ button{
     margin: 2px;
 }
 
+#btn_random_image {
+    position: relative;
+    top: 200px;
+}
+
 #titre {
     position: relative;  
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3em;
 }
 
-#btn_random_image {
+#btn_retour{
+    width: 100px;
+    height: 35px;
     position: relative;
-    top: 200px;
+    display: inline-block;
+    border-radius: 3px;  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    box-shadow: 1px 1px 7px 0px rgb(41, 41, 41);
+    margin: 2px;
+    align-self: flex-end;
+    right: 140px;
+    bottom: 75px;
 }
