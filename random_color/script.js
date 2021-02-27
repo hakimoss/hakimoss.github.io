@@ -40,9 +40,10 @@ function fonctionBtn(length = 6){
     
 }
 
+let hexresult = fonctionBtn(6);
 
-document.body.style.backgroundColor = fonctionBtn(6);
-valeur.innerText = fonctionBtn(6)
+document.body.style.backgroundColor = hexresult;
+valeur.innerText = hexresult;
 
 function functionReload(){
     window.location.replace("https://hakimoss.github.io/random_color/index.html")
