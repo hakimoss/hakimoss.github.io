@@ -3,10 +3,14 @@
 let btnRandomImage = document.getElementById("btn_random_image");
 btnRandomImage.addEventListener("click", functionReload)
 
+let largeur = window.innerWidth;
+let hauteur = window.innerHeight;
+
+nouvLien = `url('https://picsum.photos/${largeur}/${hauteur}')`;
 
 function functionRandomImage(){
-    lien = "url('https://picsum.photos/2000/2000')";
-    document.body.style.backgroundImage = lien;   
+    
+    document.body.style.backgroundImage = nouvLien;   
 }
 functionRandomImage()
 
