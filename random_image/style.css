@@ -29,19 +29,6 @@ button{
     margin: 2px;
 }
 
-#container_valeur{
-    width: 800px;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    top: 520px;
-    left: 18px;
-}
-
-h2 {   
-    font-size: 2em;   
-}
-
 #titre {
     position: relative;  
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
