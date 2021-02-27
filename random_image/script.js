@@ -1,12 +1,16 @@
 let btnRandomImage = document.getElementById("btn_random_image");
-btnRandomImage.addEventListener("click", functionRandomImage)
+btnRandomImage.addEventListener("click", functionReload)
 
 
 function functionRandomImage(){
     lien = "url('https://picsum.photos/2000/2000')";
     document.body.style.backgroundImage = lien;   
 }
+functionRandomImage()
 
+function functionReload(){
+    window.location.replace("https://hakimoss.github.io/random_image/index.html")
+}
 
 
 
