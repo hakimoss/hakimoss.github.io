@@ -3,10 +3,21 @@
 let btnRandomImage = document.getElementById("btn_random_image");
 btnRandomImage.addEventListener("click", functionReload)
 
+let grayscaleBox = document.getElementById("grayscale_box")
+
 let largeur = window.innerWidth;
 let hauteur = window.innerHeight;
 
-nouvLien = `url('https://picsum.photos/${largeur}/${hauteur}')`;
+if (grayscaleBox.checked === true){
+    nouvLien = `url('https://picsum.photos/${largeur}/${hauteur}?grayscale')`
+} else {
+    nouvLien = `url('https://picsum.photos/${largeur}/${hauteur}')`
+}
+
+
+console.log(grayscaleBox.checked)
+
+
 
 function functionRandomImage(){
     

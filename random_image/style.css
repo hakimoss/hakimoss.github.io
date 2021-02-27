@@ -56,3 +56,23 @@ body {
     right: 140px;
     bottom: 75px;
 }
+
+#conainer_grayscale {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 340px;
+    top: 110px;
+    
+}
+
+#grayscale_box {
+    height: 20px;
+    width: 20px;
+
+}
+
+#label_grayscale {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+}
