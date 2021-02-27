@@ -11,7 +11,7 @@ function fonctionBtnRgb(){
     let random3 = Math.floor(Math.random() * 255);
 
     let final = "rgb(" + random1 + "," + random2 + "," + random3 + ")";
-    
+    valeur.innerText = "Hex color"
     document.body.style.backgroundColor = final;
     valeurRgb.innerText = final;
     
