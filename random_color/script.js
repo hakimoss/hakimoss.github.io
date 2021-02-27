@@ -22,7 +22,7 @@ function fonctionBtnRgb(){
 // bouton Hex color
 
 let btn = document.getElementById("btn_hex");
-btn.addEventListener('click', fonctionBtn);
+btn.addEventListener('click', functionReload);
 
 let valeur = document.getElementById("valeur_hex");
 
@@ -44,6 +44,9 @@ function fonctionBtn(length = 6){
 document.body.style.backgroundColor = fonctionBtn(6);
 valeur.innerText = fonctionBtn(6)
 
+function functionReload(){
+    window.location.replace("https://hakimoss.github.io/random_color/index.html")
+}
 
 // random box
 
