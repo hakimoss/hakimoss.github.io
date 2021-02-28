@@ -48,7 +48,7 @@ let final_random_box;
 function randomBtnFuntion(){
     
 
-    let random_box_math = Math.floor(Math.random() * 2);
+    let random_box_math = Math.floor(Math.random() * 3);
     
     if (random_box_math === 0){
         window.location.replace("https://hakimoss.github.io/random_image/index.html")
