@@ -1,5 +1,5 @@
 body {
-   
+    
     padding: 0;
     margin: 0;   
 }
@@ -14,12 +14,10 @@ body {
 #container_btn {
    
     position: relative;
-    top: 500px;  
+    top: 538px;  
 }
 
-/*                      button                              */
-
-#btn_random_image, #btn_random_box, #grayscale_box, #blur_box{
+button{
     width: 400px;
     height: 160px;
     position: relative;
@@ -29,22 +27,7 @@ body {
     font-size: 2em;
     box-shadow: 5px 5px 7px 1px rgb(41, 41, 41);
     margin: 2px;
-}
-
-
-#btn_retour{
-    width: 100px;
-    height: 35px;
-    position: relative;
-    display: inline-block;
-    border-radius: 3px;  
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5em;
-    box-shadow: 1px 1px 7px 0px rgb(41, 41, 41);
-    margin: 2px;
-    align-self: flex-end;
-    right: 140px;
-    bottom: 75px;
+    
 }
 
 #titre {
@@ -53,8 +36,48 @@ body {
     font-size: 3em;
 }
 
-#container_btn_image {
-    display: flex;
+#btn_random_position {
     position: relative;
-    top: 400px;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    width: 400px;
+    height: 160px;
+    border-radius: 30px;  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+    box-shadow: 5px 5px 7px 1px rgb(41, 41, 41);
+    margin: 2px;
+
+}
+
+#btn_random_box{
+    position: relative;
+    top: 165px;
+    
+}
+
+#espace_mouvement{
+    border: 1px solid black;
+    height: 700px;
+    width: 1000px;
+    position: absolute;
+    top: 100px;
+  
+    display: inline-block;
+}
+
+  #btn_retour{
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    display: inline-block;
+    border-radius: 3px;  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    box-shadow: 1px 1px 7px 0px rgb(41, 41, 41);
+    margin: 2px;
+    align-self: flex-end;
+    right: 140px;
+    top: 44px;
 }

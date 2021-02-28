@@ -1,30 +1,42 @@
-// btn random image
 
-let btnRandomImage = document.getElementById("btn_random_image");
-btnRandomImage.addEventListener("click", functionReload)
+/// btn random-position
 
-let btnNoirBlanc = document.getElementById("grayscale_box");
-btnNoirBlanc.addEventListener("click", functionNoireBlanc)
+
+let btnRandomPosition = document.getElementById("btn_random_position");
+btnRandomPosition.addEventListener('click', functionRandomPosition);
 
 let largeur = window.innerWidth;
 let hauteur = window.innerHeight;
 
 
+function functionRandomPosition(){
 
+    if(navigator.appName == "Microsoft Internet Explorer"){
+        var x = event.x+document.body.scrollLeft;
+        var y = event.y+document.body.scrollTop;
+    } else {
+        var x = event.pageX;  
+        var y = event.pageY;      
+    }
+    let random1 = Math.floor(Math.random() * hauteur);
+    let random2 = Math.floor(Math.random() * largeur);
+    let random3 = Math.floor(Math.random() * 2);
 
+    let direction = "";
 
-function functionNoireBlanc(){
-    document.body.style.backgroundImage = `url('https://picsum.photos/${largeur}/${hauteur}?grayscale)`
-    window.location.replace("http://127.0.0.1:5500/random_image/index.html")
+    if(random3 == 1){
+        direction = "+";
+    } else {
+        direction = "-"
+    }
     
+
+    document.getElementById("btn_random_position").style.left = (direction, random2)+'px';
+    document.getElementById("btn_random_position").style.top = (direction, random1)+'px';
+
 }
 
 
-function functionReload(){ 
-    window.location.replace("http://127.0.0.1:5500/random_image/index.html")
-}
-
-document.body.style.backgroundImage = `url('https://picsum.photos/${largeur}/${hauteur}')`
 
 /// btn random-box
 
@@ -47,6 +59,7 @@ function randomBtnFuntion(){
     }
 }
 
+
 // bouton retour
 
 let btnRetour = document.getElementById("btn_retour");
@@ -55,3 +68,5 @@ btnRetour.addEventListener('click', btnRetourFunction)
 function btnRetourFunction(){
     window.location.replace("https://hakimoss.github.io/")
 }
+
+
