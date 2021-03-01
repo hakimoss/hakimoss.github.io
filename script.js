@@ -50,7 +50,7 @@ loader.load("scene.gltf", function(gltf){
     scene.add(gltf.scene);
 });
 scene.background = new THREE.Color(0xffffff)
-var light = new THREE.HemisphereLight(0xffffff, 0x000000, 4);
+var light = new THREE.HemisphereLight(0xffffff, 0x000000, 3.7);
 scene.add(light);
 camera.position.set(-5, 15, 15);
 
