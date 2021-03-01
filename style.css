@@ -31,6 +31,8 @@ button{
     box-shadow: 5px 5px 7px 1px rgb(41, 41, 41);
     margin: 2px;
     top: 165px;
+    box-sizing: border-box;
+    transition: all 500ms ease; 
 }
 
 #titre {
@@ -40,3 +42,22 @@ button{
     text-align: center
 }
 
+
+
+button:hover{
+    color: #eccf26;
+    border: #eccf26 solid 10px;
+    background:rgba(255, 255, 255, 0.979);
+    border-radius: 0%;
+    font-size: 2.3em;
+}
+
+button:active{
+    background-color: #dbdbdb;
+    
+}
+
+button:focus {
+    border: #eccf26 solid 20px;
+}
+ 
