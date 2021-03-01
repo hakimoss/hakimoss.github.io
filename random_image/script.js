@@ -15,13 +15,13 @@ let hauteur = window.innerHeight;
 
 function functionNoireBlanc(){
     document.body.style.backgroundImage = `url('https://picsum.photos/${largeur}/${hauteur}?grayscale)`
-    window.location.replace("http://127.0.0.1:5500/random_image/index.html")
+    window.location.replace("https://hakimoss.github.io/random_image/index.html")
     
 }
 
 
 function functionReload(){ 
-    window.location.replace("http://127.0.0.1:5500/random_image/index.html")
+    window.location.replace("https://hakimoss.github.io/random_image/index.html")
 }
 
 document.body.style.backgroundImage = `url('https://picsum.photos/${largeur}/${hauteur}')`
