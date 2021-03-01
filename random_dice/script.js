@@ -8,7 +8,11 @@ let resultat = document.getElementById("resultat");
 function randomNumber(){
     let valeurFace = document.getElementById("valeur_dice").value;
     let random1 = Math.floor(Math.random() * valeurFace);
-    resultat.textContent = random1
+    resultat.textContent = random1 + 1;
+
+    if (valeurFace <= 1){
+        resultat.textContent = "Veuillez indiquer au moin 2 faces"
+    }
 }
 
 
