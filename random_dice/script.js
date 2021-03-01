@@ -1,3 +1,20 @@
+
+let btnRandomDice = document.getElementById("btn_random_dice");
+btnRandomDice.addEventListener('click', randomNumber)
+
+let resultat = document.getElementById("resultat");
+
+
+function randomNumber(){
+    let valeurFace = document.getElementById("valeur_dice").value;
+    let random1 = Math.floor(Math.random() * valeurFace);
+    resultat.textContent = random1
+}
+
+
+
+
+
 /// btn random-box
 
 let btnRandomBox = document.getElementById("btn_random_box");
@@ -20,3 +37,14 @@ function randomBtnFuntion(){
         window.location.replace("https://hakimoss.github.io/random_dice/index.html")
     }
 }
+
+// bouton retour
+
+let btnRetour = document.getElementById("btn_retour");
+btnRetour.addEventListener('click', btnRetourFunction)
+
+function btnRetourFunction(){
+    window.location.replace("https://hakimoss.github.io/")
+}
+
+
