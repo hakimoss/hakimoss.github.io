@@ -4,19 +4,18 @@ body {
     margin: 0;   
 }
 
-body{
+#container{
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-      
+    align-items: center;     
 }
 
-#btn_random_box {   
-    top: 665px;     
-}
+/*                    button                       */
 
-button{
+
+
+#btn_random_box, #btn_random_password {
     width: 400px;
     height: 160px;
     position: relative;
@@ -26,24 +25,26 @@ button{
     font-size: 2em;
     box-shadow: 5px 5px 7px 1px rgb(41, 41, 41);
     margin: 2px;
-    
     box-sizing: border-box;
     transition: all 500ms ease; 
 }
 
-#titre {
-    position: relative;  
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 3em;
-    text-align: center
-    
+#btn_random_box {
+    position: relative;
+    top: 478px;
 }
 
- 
-#btn_menu{
-    width: 140px;
+
+
+#btn_random_password {
+    position: relative;
+    top: 280px;
+}
+
+#btn_retour{
+    width: 100px;
     height: 35px;
-    position: absolute;
+    position: relative;
     display: inline-block;
     border-radius: 3px;  
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -51,12 +52,16 @@ button{
     box-shadow: 1px 1px 7px 0px rgb(41, 41, 41);
     margin: 2px;
     align-self: flex-end;
+    right: 140px;
+    bottom: 75px;
     transform-style: preserve-3d;
     box-sizing: border-box;
     transition: all 500ms ease; 
 }
 
+
 /*               animation btn random-box       */
+
 
 #btn_random_box:hover{
     color: #eccf26;
@@ -74,11 +79,11 @@ button{
 #btn_random_box:focus {
     border: #eccf26 solid 20px;
 }
-
+ 
 /*               animation btn retour       */
 
 
-#btn_menu:after {
+#btn_retour:after {
     top: -100%;
     left: 0px;
     width: 100%;
@@ -86,66 +91,29 @@ button{
     position: absolute;
     background: #e9e9e9;
     border-radius: 3px;
-    content: 'Choisissez';
+    content: 'Acceuil';
     transform-origin: left bottom;
     transform: rotateX(90deg);
     box-shadow: 1px 1px 7px 0px rgb(41, 41, 41);       
 }
 
-#btn_menu:hover {
+#btn_retour:hover {
     transform-origin: center bottom;
     transform: rotateX(-90deg) translateY(100%);
     
 }
 
-/*           test             */
+/*                    titre                       */
 
-a {
-    text-decoration: none;
+#titre {
+    position: relative;  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
 }
 
-ul{
-	list-style-type: none;	
-}
-
-#dropdown:hover #dropdown-menu {
-	display: block;
-}
-
-#dropdown-menu a {
-    color: black;
-    padding: 8px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  #dropdown-menu {
-    display: none;
+h2 {
     position: absolute;
-    background-color: #f1f1f14b;
-    min-width: 140px;
-    z-index: 1;
-    left: 220px;
-    top: 38px;
-  }
-
-  #dropdown {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    left: 250px;
-    bottom: 78px;
-    
-  }
-
-  #dropdown:hover #dropdown-menu {
-	display: block;
+    top: 280px;
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
-#dropdown-menu a:hover {
-    background-color: #dfdfdf;
-    border-bottom: 1px solid #686868;
-    padding: 8px 16px;
-    text-decoration: none;
-    display: block;
-  }
