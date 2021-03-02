@@ -1,30 +1,46 @@
 // btn random image
 
-let btnRandomImage = document.getElementById("btn_random_image");
-btnRandomImage.addEventListener("click", functionReload)
-
-let btnNoirBlanc = document.getElementById("grayscale_box");
-btnNoirBlanc.addEventListener("click", functionNoireBlanc)
+let btnRandomImage = document.getElementById("btn_random_image").addEventListener("click", functionNormal);
+let btnNoirBlanc = document.getElementById("grayscale_box").addEventListener("click", functionNoireBlanc);
+let btnBlur = document.getElementById("blur_box").addEventListener("click", functionBlur);
 
 let largeur = window.innerWidth;
 let hauteur = window.innerHeight;
+let nouvImage = document.body
+let nouvUrl = "https://picsum.photos/" + largeur + "/" + hauteur
+nouvImage.style.backgroundImage = `url(${nouvUrl})`
 
 
 
+
+function functionBlur(){
+    largeur = window.innerWidth++;
+    hauteur = window.innerHeight++;
+    nouvImage = document.body
+    nouvUrl = "https://picsum.photos/" + largeur + "/" + hauteur + "?blur"
+    nouvImage.style.backgroundImage = `url(${nouvUrl})`
+ 
+}
 
 
 function functionNoireBlanc(){
-    document.body.style.backgroundImage = `url('https://picsum.photos/${largeur}/${hauteur}?grayscale)`
-    window.location.replace("https://hakimoss.github.io/random_image/index.html")
+    largeur = window.innerWidth++;
+    hauteur = window.innerHeight++;
+    nouvImage = document.body
+    nouvUrl = "https://picsum.photos/" + largeur + "/" + hauteur + "?grayscale"
+    nouvImage.style.backgroundImage = `url(${nouvUrl})`
     
 }
 
 
-function functionReload(){ 
-    window.location.replace("https://hakimoss.github.io/random_image/index.html")
+function functionNormal(){ 
+    largeur = window.innerWidth++;
+    hauteur = window.innerHeight++;
+    nouvImage = document.body
+    nouvUrl = "https://picsum.photos/" + largeur + "/" + hauteur
+    nouvImage.style.backgroundImage = `url(${nouvUrl})`
+    
 }
-
-document.body.style.backgroundImage = `url('https://picsum.photos/${largeur}/${hauteur}')`
 
 /// btn random-box
 
