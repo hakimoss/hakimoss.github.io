@@ -40,13 +40,6 @@ function functionResultat(){
 
 
 
-// on va asseyer de changer la valeur par defaut en js du nombre indiquez dans le chant
-
-
-
-
-
-/*
 
 /// btn random-box
 
@@ -58,7 +51,7 @@ let final_random_box;
 function randomBtnFuntion(){
     
 
-    let random_box_math = Math.floor(Math.random() * 4);
+    let random_box_math = Math.floor(Math.random() * 5);
     
     if (random_box_math === 0){
         window.location.replace("https://hakimoss.github.io/random_image/index.html")
@@ -66,8 +59,10 @@ function randomBtnFuntion(){
         window.location.replace("https://hakimoss.github.io/random_color/index.html")
     } else if (random_box_math === 2){
         window.location.replace("https://hakimoss.github.io/random_position/index.html")
-    } else {
+    } else if (random_box_math === 3) {
         window.location.replace("https://hakimoss.github.io/random_dice/index.html")
+    } else {
+        window.location.replace("https://hakimoss.github.io/random_password/index.html")
     }
 }
 
@@ -81,5 +76,4 @@ function btnRetourFunction(){
 }
 
 
-*/
 
