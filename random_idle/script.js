@@ -1,6 +1,10 @@
 
 point = 0;
 
+clickCompteur = 0;
+
+prix = 50
+
 function animationDebut(){
     $("h2").text("Bienvenue chere aventurier !")
     $("h2").animate({top: '+=200px', opacity: 1},2000)
@@ -18,7 +22,7 @@ animationDebut()
 
 $("#btn_clicker").click(function(){
   
-
+    clickCompteur++;
 
     point++;
    
@@ -26,15 +30,23 @@ $("#btn_clicker").click(function(){
     
     console.log(point)
 
-    if(point === 50){
-        $("h2").text("Génial 50pts tu peu maintenant utiliser le gold generateur")
-        
-        $("#autoGold").css("visibility", "visible")
-    }
     
-    if(point === 5){
+    
+    if(clickCompteur === 5){
         $("h2").text("Essait d'atteindre les 50pts, j'te reserver une surprise")
         
+    }
+
+    if(clickCompteur === 50){
+        $("h2").text("Génial 50pts tu peu maintenant utiliser le gold generateur")
+        $("#prix").text(prix)
+        $("#autoGold").css("visibility", "visible")
+    }
+
+    if(clickCompteur === 100){
+        $("h2").text("Génial 100pts tu a debloquer le niv 2 du generateur")
+        
+        $("#autoGold").css("visibility", "visible")
     }
 
 })
@@ -43,19 +55,45 @@ $("#btn_clicker").click(function(){
 
 let generateGold;
 
+prixAutoGold = 50
+
 $("#autoGold").click(function AutoGold() {
-    if(point >= 50){
+    if(point >= prixAutoGold){
+        point = point - prixAutoGold
         generateGold = setInterval(autoGold, 1000);
+        prixAutoGold = prixAutoGold + 50
+        prix = prix + 50
+        $("#prix").text(prix)
+        
     }
 })
+
+
    
 function autoGold() {
-    
-        point++
+        clickCompteur++;
+        point++;
         $("#score").html(+point)
     
  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /// btn random-box
 
