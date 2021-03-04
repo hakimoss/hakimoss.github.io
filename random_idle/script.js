@@ -5,9 +5,12 @@ clickCompteur = 0;
 
 prix = 50
 
+let imageUrl1 = "image_gazon/gaz_niv1.png"
+
 function animationDebut(){
     $("h2").text("Bienvenue chere aventurier !")
     $("h2").animate({top: '+=200px', opacity: 1},2000)
+    
     
     
 }
@@ -33,20 +36,26 @@ $("#btn_clicker").click(function(){
     
     
     if(clickCompteur === 5){
-        $("h2").text("Essait d'atteindre les 50pts, j'te reserver une surprise")
-        
+        $("h2").text("Essait d'atteindre les 50pts, j'te reserver une surprise")    
     }
 
     if(clickCompteur === 50){
-        $("h2").text("Génial 50pts tu peu maintenant utiliser le gold generateur")
-        $("#prix").text(prix)
+        $("h2").text("Génial 50pts tu peu maintenant utiliser le gold generateur") 
+        $("#ecran_amelioration").animate({height: '100px', opacity: 1},2000)
+        $("#autoGold").animate({opacity: 1},2000)
+        $("#prix").text(prix)    
+    }
+
+    if(prix === 100){
+        $("h2").html("Je ressent quelque chose d'étrange... Continue d'amélioré le generateur")
+        
         $("#autoGold").css("visibility", "visible")
     }
 
-    if(clickCompteur === 100){
-        $("h2").text("Génial 100pts tu a debloquer le niv 2 du generateur")
-        
-        $("#autoGold").css("visibility", "visible")
+    if (clickCompteur === 1){
+        $("h2").text("Regarde !! De l'herbe a commencer grace a toi ! continue voire !")
+        $("#btn_clicker").css("background-image", "url("+ imageUrl1 +")")
+
     }
 
 })
@@ -68,8 +77,7 @@ $("#autoGold").click(function AutoGold() {
     }
 })
 
-
-   
+ 
 function autoGold() {
         clickCompteur++;
         point++;
