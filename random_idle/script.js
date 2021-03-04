@@ -52,9 +52,10 @@ $("#btn_clicker").click(function(){
         $("#autoGold").css("visibility", "visible")
     }
 
-    if (clickCompteur === 1){
+    if (prix === 150){
         $("h2").text("Regarde !! De l'herbe a commencer grace a toi ! continue voire !")
         $("#btn_clicker").css("background-image", "url("+ imageUrl1 +")")
+        $("#score").css("color", " rgb(43, 172, 43)")
 
     }
 
