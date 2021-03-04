@@ -120,6 +120,14 @@ body {
     width: 100px;
 }
 
+#ciel_btn {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: rgb(43, 172, 43);
+    opacity: 0;
+}
 
 /*                      Jeux ecran                    */
 
@@ -190,6 +198,14 @@ body {
     top: 80px;
     font-size: 2.2em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#decompte {
+    position: absolute;
+    font-size: 2.3em;
+    color: rgb(218, 47, 62);
+    opacity: 0;
 
 }
 

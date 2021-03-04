@@ -1,7 +1,7 @@
 
-let point = 0;
+let point = 49;
 
-let clickCompteur = 0;
+let clickCompteur = 49;
 
 let prix = 50;
 
@@ -16,6 +16,8 @@ let imageUrl1 = "image_gazon/gaz_niv1.png";
 let imageUrl2 = "image_gazon/gaz_niv2.png";
 
 let imageUrl3 = "image_gazon/gaz_niv3.png";
+
+let imageUrl4 = "image_gazon/gaz_niv4.png";
 
 function animationDebut(){
     $("h2").text("Bienvenue chere aventurier !");
@@ -51,19 +53,20 @@ $("#btn_clicker").click(function(){
 
 
 
-let generateGold;
+
 
 prixAutoGold = 50
 
 $("#autoGold").click(function AutoGold() {
     if(point >= prixAutoGold){
         point = point - prixAutoGold
-        generateGold = setInterval(autoGold, 1000);
+        setInterval(autoGold, 1000);
         prixAutoGold = prixAutoGold + 50
         prix = prix + 50
         $("#prix").text(prix)       
     }
     if(prix === 100){
+        $("#score").css("color", " rgb(43, 172, 43)")
         $("h2").html("Je ressent quelque chose d'étrange... Continue d'amélioré le generateur")      
     }
     if (prix === 150){
@@ -73,7 +76,7 @@ $("#autoGold").click(function AutoGold() {
         $("#prix_click").text(prixClicker)  
 
         $("#btn_clicker").css("background-image", "url("+ imageUrl1 +")")
-        $("#score").css("color", " rgb(43, 172, 43)")
+        
     }
 })
 
@@ -112,8 +115,85 @@ $("#upgrade_level_btn").click(function(){
     $("#btn_clicker").css("background-image", "url("+ imageUrl3 +")")
     $("h2").html("C'est hallucina... eh.. aie... je ressant quelque chose d'étrange</br>gagne encore suffisament de pts pour faire encore pousser le gazon !")   
     }  
+    if(prixUpgrade === 400){
+
+        $("#btn_clicker").css("background-image", "url("+ imageUrl4 +")")
+        $("h2").html("Le gazon !!! Magnifique, on pourrait asseyer de faire revenir le ciel ?</br>Regarde ce nouveau bouton.")   
+        $("#ciel_btn").animate({
+            opacity: 1,
+            top: "115px"
+        },2000)
+    }
 })
-  
+ 
+//                                          ciel btn
+
+let valeurCiel = 0
+
+$("#ciel_btn").click(function(){
+    valeurCiel++
+   
+    if(valeurCiel === 1){
+        $("#ciel_btn").css("background-color", "rgb(167, 25, 37)")
+        $("h2").html("hein ?! Il est devenue rouge, reclick pour voire")   
+    }
+ 
+    if (valeurCiel === 2){
+        $("h2").html("Attend, Attend !!")   
+        $("#decompte").animate({
+            opacity: 1,
+            top: "170px"
+        },2000)
+        setInterval(decompteCiel, 1000);
+        $("button").animate({opacity: 0},2000)
+        $("label").animate({opacity: 0},2000)
+        $("#score").animate({opacity: 0},2000)
+
+        
+    }
+})
+
+
+//                                          ciel animation
+
+let tempCielsec = 10
+
+
+
+function decompteCiel() {
+
+    if(tempCielsec > -19){
+        tempCielsec--
+    }
+    
+    if(tempCielsec > 0){
+        
+        $("#decompte").html(tempCielsec)  
+    }  
+    if(tempCielsec === 5){
+        $("h2").html("Pourquoi sa tombe a chaque fois sur moi -_-")   
+
+    }
+    
+    if(tempCielsec === 0){
+        $("body").css("background-color", "black")
+        $("#decompte").animate({opacity: 0},2000)
+    }
+    if (tempCielsec === -5){
+       
+        $("h2").css("color", "white")
+        $("h2").html("Mais quesque ta foutue !!! Bordel ...")   
+    }
+    if(tempCielsec === -12){
+        $("h2").html("Bon, au lieu de paniquer rend toi unpeu utile")   
+    }
+    if(tempCielsec === -19){
+        $("h2").html("Click sur moi, on va peut etre y voire plus claire")   
+    }
+    
+}
+
+
 
 
 ///                                         btn random-box
