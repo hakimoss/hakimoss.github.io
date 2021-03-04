@@ -1,7 +1,7 @@
 
-let point = 49;
+let point = 0;
 
-let clickCompteur = 49;
+let clickCompteur = 0;
 
 let prix = 50;
 
