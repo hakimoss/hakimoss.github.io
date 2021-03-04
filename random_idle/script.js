@@ -1,21 +1,25 @@
 
-point = 0;
+let point = 0;
 
-clickCompteur = 0;
+let clickCompteur = 0;
 
-prix = 50
+let prix = 50;
 
-pointParClick = 1
+let pointParClick = 1;
 
-prix_clicker = 200
+let prixClicker = 200;
 
-let imageUrl1 = "image_gazon/gaz_niv1.png"
+let prixUpgrade = 200;
 
-let imageUrl2 = "image_gazon/gaz_niv2.png"
+let imageUrl1 = "image_gazon/gaz_niv1.png";
+
+let imageUrl2 = "image_gazon/gaz_niv2.png";
+
+let imageUrl3 = "image_gazon/gaz_niv3.png";
 
 function animationDebut(){
-    $("h2").text("Bienvenue chere aventurier !")
-    $("h2").animate({top: '+=200px', opacity: 1},2000)   
+    $("h2").text("Bienvenue chere aventurier !");
+    $("h2").animate({top: '+=200px', opacity: 1},2000);
 }
 
 animationDebut()
@@ -30,9 +34,6 @@ $("#btn_clicker").click(function(){
    
     score = $("#score").html(point)
     
-    console.log(point)
-   
-
     if(clickCompteur === 5){
         $("h2").text("Essait d'atteindre les 50pts, j'te reserver une surprise")    
     }
@@ -69,7 +70,7 @@ $("#autoGold").click(function AutoGold() {
         $("h2").html("Regarde !! De l'herbe pousse grace a toi ! continue voire !</br>Un nouveau bouton est apparue, essaie le")
 
         $("#click_plus1_fenetre").animate({opacity: 1},2000)
-        $("#prix_click").text(prix_clicker)  
+        $("#prix_click").text(prixClicker)  
 
         $("#btn_clicker").css("background-image", "url("+ imageUrl1 +")")
         $("#score").css("color", " rgb(43, 172, 43)")
@@ -82,24 +83,36 @@ function autoGold() {
         point++;
         $("#score").html(+point)
 }
+
 //                                          Click +1
 
 $("#click_plus1").click(function clickPlusFunction(){
-    if(point >= prix_clicker){
+    if(point >= prixClicker){
         pointParClick++
-        point = point - prix_clicker
-        prix_clicker = prix_clicker + 50
-        $("#prix_click").text(prix_clicker)
+        point = point - prixClicker
+        prixClicker = prixClicker + 50
+        $("#prix_click").text(prixClicker)
     }
-    if(prix_clicker === 250){
+    if(prixClicker === 250){
         $("#btn_clicker").css("background-image", "url("+ imageUrl2 +")")
-        $("h2").html("Incroyable... tu fait réaparetre la nature ! Le gazon continue de pousser.")
-
+        $("h2").html("Incroyable... tu fait réaparetre la nature ! Le gazon continue de pousser.</br>Regarde un nouveau bouton est apparue. Test le !")
+        $("#upgrade_level_fenetre").animate({opacity: 1},2000)
+        $("#prix_upgrade").text(prixUpgrade)
     }
 })
 
 
+//                                          uprage btn
 
+$("#upgrade_level_btn").click(function(){
+    if(point >= prixUpgrade){
+    point = point - prixUpgrade;
+    prixUpgrade = prixUpgrade + 100
+    $("#prix_upgrade").text(prixUpgrade)
+    $("#btn_clicker").css("background-image", "url("+ imageUrl3 +")")
+    $("h2").html("C'est hallucina... eh.. aie... je ressant quelque chose d'étrange</br>gagne encore suffisament de pts pour faire encore pousser le gazon !")   
+    }  
+})
   
 
 

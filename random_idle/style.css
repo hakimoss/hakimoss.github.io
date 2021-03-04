@@ -11,8 +11,7 @@ body {
     align-items: center;     
 }
 
-/*                    button                       */
-
+/*                    button de navigation                   */
 
 #btn_random_box {
     width: 400px;
@@ -26,13 +25,9 @@ body {
     margin: 2px;
     box-sizing: border-box;
     transition: all 500ms ease; 
-}
-
-#btn_random_box {
     position: relative;
     top: 140px;
 }
-
 
 #btn_retour{
     width: 100px;
@@ -52,24 +47,7 @@ body {
     transform-style: preserve-3d;
 }
 
-#btn_clicker {
-    top: 316px;
-    width: 500px;
-    height: 100px;
-    position: relative;
-    display: inline-block;
-    border-radius: 6px;  
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2em;
-    box-shadow: 1px 1px 2px 0px rgb(41, 41, 41);
-    margin: 2px;
-    box-sizing: border-box;
-    transition: all 500ms ease; 
-    
-}
-
 /*               animation btn random-box       */
-
 
 #btn_random_box:hover{
     color: #eccf26;
@@ -111,8 +89,6 @@ body {
     
 }
 
-
-
 /*                    titre                       */
 
 #titre {
@@ -121,16 +97,31 @@ body {
     font-size: 3em;
 }
 
-#vie_monstre {
+/*                      Jeux bouton                   */
+
+#btn_clicker {
+    top: 316px;
+    width: 500px;
+    height: 100px;
+    position: relative;
     display: inline-block;
-    position: relative; 
+    border-radius: 6px;  
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.3em;
-    top: 200px;
+    font-size: 2em;
+    box-shadow: 1px 1px 2px 0px rgb(41, 41, 41);
+    margin: 2px;
+    box-sizing: border-box;
+    transition: all 500ms ease; 
+    
+}
+
+#autoGold, #click_plus1, #upgrade_level_btn{
+    height: 40px;
+    width: 100px;
 }
 
 
-/*                      jeu ecran                   */
+/*                      Jeux ecran                    */
 
 #ecran_principale {
     border: 1px solid black;
@@ -141,26 +132,14 @@ body {
     width: 500px;
 }
 
-#argent {
-   display: inline-block;
-   position: relative;  
-}
-
 #ecran_amelioration {
     display: flex;
     position: relative;
     top: 110px;
     border: 1px solid black;
-    opacity: 0;
+    opacity: 1;
     height: 0px;
     width: 500px;
-}
-
-h2{
-    font-size: 1em;
-    position: absolute;
-    top: 190px;
-    opacity: 0;
 }
 
 #autogold_fenetre{
@@ -181,15 +160,30 @@ h2{
     opacity: 0;
 }
 
-#autoGold, #click_plus1{
-    height: 40px;
+#upgrade_level_fenetre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100px;
+    height: 98px;
+    opacity: 0;
+    position: relative;
+    left: 200px;
 }
 
-#prix, #prix_click {
+/*                      Jeux valeur                   */
+
+#argent {
+   display: inline-block;
+   position: relative;  
+}
+
+#prix, #prix_click, #prix_upgrade {
     position: relative;
     top: 8px;
+    
 }
+
 #score {
     color: black;
     position: relative;
@@ -198,3 +192,14 @@ h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
+
+/*                      Jeux narateur                   */
+
+h2{
+    font-size: 1em;
+    position: absolute;
+    top: 190px;
+    opacity: 0;
+}
+
+
