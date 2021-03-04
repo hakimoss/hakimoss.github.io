@@ -1,39 +1,60 @@
 
-/// btn random-position
+point = 0;
+
+function animationDebut(){
+    $("h2").text("Bienvenue chere aventurier !")
+    $("h2").animate({top: '+=200px', opacity: 1},2000)
+    
+    
+}
 
 
-let btnRandomPosition = document.getElementById("btn_random_position");
-btnRandomPosition.addEventListener('click', functionRandomPosition);
 
-let largeur = window.innerWidth;
-let hauteur = window.innerHeight;
+animationDebut()
 
 
-function functionRandomPosition(){
 
-    if(navigator.appName == "Microsoft Internet Explorer"){
-        var x = event.x+document.body.scrollLeft;
-        var y = event.y+document.body.scrollTop;
-    } else {
-        var x = event.pageX;  
-        var y = event.pageY;      
-    }
-    let random1 = Math.floor(Math.random() * hauteur);
-    let random2 = Math.floor(Math.random() * largeur);
-    let random3 = Math.floor(Math.random() * 2);
+//                  bouton principal
 
-    let direction = "";
+$("#btn_clicker").click(function(){
+  
 
-    if(random3 == 1){
-        direction = "+";
-    } else {
-        direction = "-"
+
+    point++;
+   
+    score = $("#score").html(point)
+    
+    console.log(point)
+
+    if(point === 50){
+        $("h2").text("Génial 50pts tu peu maintenant utiliser le gold generateur")
+        
+        $("#autoGold").css("visibility", "visible")
     }
     
+    if(point === 5){
+        $("h2").text("Essait d'atteindre les 50pts, j'te reserver une surprise")
+        
+    }
 
-    document.getElementById("btn_random_position").style.left = (direction, random2)+'px';
-    document.getElementById("btn_random_position").style.top = (direction, random1)+'px';
+})
 
+//                  generateur auto gold
+
+let generateGold;
+
+$("#autoGold").click(function AutoGold() {
+    if(point >= 50){
+        generateGold = setInterval(autoGold, 1000);
+    }
+})
+   
+function autoGold() {
+    
+        point++
+        $("#score").html(+point)
+    
+ 
 }
 
 /// btn random-box
@@ -62,6 +83,7 @@ function randomBtnFuntion(){
         window.location.replace("https://hakimoss.github.io/random_idle/index.html")
     }
 }
+
 
 // bouton retour
 
