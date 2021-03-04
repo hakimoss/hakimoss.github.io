@@ -5,36 +5,34 @@ clickCompteur = 0;
 
 prix = 50
 
+pointParClick = 1
+
+prix_clicker = 200
+
 let imageUrl1 = "image_gazon/gaz_niv1.png"
+
+let imageUrl2 = "image_gazon/gaz_niv2.png"
 
 function animationDebut(){
     $("h2").text("Bienvenue chere aventurier !")
-    $("h2").animate({top: '+=200px', opacity: 1},2000)
-    
-    
-    
+    $("h2").animate({top: '+=200px', opacity: 1},2000)   
 }
-
-
 
 animationDebut()
 
-
-
-//                  bouton principal
+//                                        bouton principal
 
 $("#btn_clicker").click(function(){
   
     clickCompteur++;
 
-    point++;
+    point = point + pointParClick
    
     score = $("#score").html(point)
     
     console.log(point)
+   
 
-    
-    
     if(clickCompteur === 5){
         $("h2").text("Essait d'atteindre les 50pts, j'te reserver une surprise")    
     }
@@ -42,26 +40,15 @@ $("#btn_clicker").click(function(){
     if(clickCompteur === 50){
         $("h2").text("Génial 50pts tu peu maintenant utiliser le gold generateur") 
         $("#ecran_amelioration").animate({height: '100px', opacity: 1},2000)
-        $("#autoGold").animate({opacity: 1},2000)
+        $("#autogold_fenetre").animate({opacity: 1},2000)
         $("#prix").text(prix)    
-    }
-
-    if(prix === 100){
-        $("h2").html("Je ressent quelque chose d'étrange... Continue d'amélioré le generateur")
-        
-        $("#autoGold").css("visibility", "visible")
-    }
-
-    if (prix === 150){
-        $("h2").text("Regarde !! De l'herbe a commencer grace a toi ! continue voire !")
-        $("#btn_clicker").css("background-image", "url("+ imageUrl1 +")")
-        $("#score").css("color", " rgb(43, 172, 43)")
-
-    }
-
+    }   
 })
 
-//                  generateur auto gold
+//                                       generateur auto gold
+
+
+
 
 let generateGold;
 
@@ -73,8 +60,19 @@ $("#autoGold").click(function AutoGold() {
         generateGold = setInterval(autoGold, 1000);
         prixAutoGold = prixAutoGold + 50
         prix = prix + 50
-        $("#prix").text(prix)
-        
+        $("#prix").text(prix)       
+    }
+    if(prix === 100){
+        $("h2").html("Je ressent quelque chose d'étrange... Continue d'amélioré le generateur")      
+    }
+    if (prix === 150){
+        $("h2").html("Regarde !! De l'herbe pousse grace a toi ! continue voire !</br>Un nouveau bouton est apparue, essaie le")
+
+        $("#click_plus1_fenetre").animate({opacity: 1},2000)
+        $("#prix_click").text(prix_clicker)  
+
+        $("#btn_clicker").css("background-image", "url("+ imageUrl1 +")")
+        $("#score").css("color", " rgb(43, 172, 43)")
     }
 })
 
@@ -83,28 +81,29 @@ function autoGold() {
         clickCompteur++;
         point++;
         $("#score").html(+point)
-    
- 
 }
+//                                          Click +1
+
+$("#click_plus1").click(function clickPlusFunction(){
+    if(point >= prix_clicker){
+        pointParClick++
+        point = point - prix_clicker
+        prix_clicker = prix_clicker + 50
+        $("#prix_click").text(prix_clicker)
+    }
+    if(prix_clicker === 250){
+        $("#btn_clicker").css("background-image", "url("+ imageUrl2 +")")
+        $("h2").html("Incroyable... tu fait réaparetre la nature ! Le gazon continue de pousser.")
+
+    }
+})
 
 
 
+  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/// btn random-box
+///                                         btn random-box
 
 let btnRandomBox = document.getElementById("btn_random_box");
 btnRandomBox.addEventListener('click', randomBtnFuntion)
@@ -132,7 +131,7 @@ function randomBtnFuntion(){
 }
 
 
-// bouton retour
+//                                          bouton retour
 
 let btnRetour = document.getElementById("btn_retour");
 btnRetour.addEventListener('click', btnRetourFunction)

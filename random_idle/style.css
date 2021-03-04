@@ -147,16 +147,13 @@ body {
 }
 
 #ecran_amelioration {
+    display: flex;
     position: relative;
     top: 110px;
     border: 1px solid black;
     opacity: 0;
     height: 0px;
     width: 500px;
-}
-
-#autoGold{
-    opacity: 0;
 }
 
 h2{
@@ -172,14 +169,24 @@ h2{
     align-items: center;
     width: 100px;
     height: 98px;
+    opacity: 0;
 }
 
-#autoGold{
+#click_plus1_fenetre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 98px;
+    opacity: 0;
+}
+
+#autoGold, #click_plus1{
     height: 40px;
     width: 100px;
 }
 
-#prix {
+#prix, #prix_click {
     position: relative;
     top: 8px;
 }
