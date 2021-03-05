@@ -1,46 +1,64 @@
-// btn random image
-
-let btnRandomImage = document.getElementById("btn_random_image").addEventListener("click", functionNormal);
-let btnNoirBlanc = document.getElementById("grayscale_box").addEventListener("click", functionNoireBlanc);
-let btnBlur = document.getElementById("blur_box").addEventListener("click", functionBlur);
-
-let largeur = window.innerWidth;
-let hauteur = window.innerHeight;
-let nouvImage = document.body
-let nouvUrl = "https://picsum.photos/" + largeur + "/" + hauteur
-nouvImage.style.backgroundImage = `url(${nouvUrl})`
 
 
+//name
+
+//languages [1] [2] [3]
+
+//capital
+
+//currencies
+
+//population
+
+////timezones
 
 
-function functionBlur(){
-    largeur = window.innerWidth++;
-    hauteur = window.innerHeight++;
-    nouvImage = document.body
-    nouvUrl = "https://picsum.photos/" + largeur + "/" + hauteur + "?blur"
-    nouvImage.style.backgroundImage = `url(${nouvUrl})`
- 
-}
-
-
-function functionNoireBlanc(){
-    largeur = window.innerWidth++;
-    hauteur = window.innerHeight++;
-    nouvImage = document.body
-    nouvUrl = "https://picsum.photos/" + largeur + "/" + hauteur + "?grayscale"
-    nouvImage.style.backgroundImage = `url(${nouvUrl})`
+let callBackGetSuccess = function(data) {
+    console.log(data)
     
+let randomPay = Math.floor(Math.random() * 250);
+
+    url = "url(" + data[randomPay].flag + ")"
+$("#ecran").css("background-image", url )
+
+$("#nom_pay").html("Pays : " + data[randomPay].name)
+$("#capital").html("Capitale : " + data[randomPay].capital)
+$("#languages").html("Language : " + data[randomPay].languages[0].name)
+$("#population").html("Population : " + data[randomPay].population)
+$("#currencies").html("Nom de monais : " + data[randomPay].currencies[0].name)
+$("#timezones").html("Symbole de monais : " + data[randomPay].currencies[0].symbol)
+
+
 }
 
 
-function functionNormal(){ 
-    largeur = window.innerWidth++;
-    hauteur = window.innerHeight++;
-    nouvImage = document.body
-    nouvUrl = "https://picsum.photos/" + largeur + "/" + hauteur
-    nouvImage.style.backgroundImage = `url(${nouvUrl})`
+
+
+
+
+
+
+
+$("#btn_random_pay").click(function(){
+
+    let url = "https://restcountries.eu/rest/v2/all"
     
-}
+    $.get(url, callBackGetSuccess).done(function() {
+        ///alert("second success")
+    })
+    .fail(function() {
+        alert("error");
+    })
+    .always(function() {
+        // alert( "finished")
+    })
+
+
+})
+
+
+
+
 
 /// btn random-box
 

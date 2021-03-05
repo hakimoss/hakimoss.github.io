@@ -46,7 +46,7 @@ let final_random_box;
 function randomBtnFuntion(){
     
 
-    let random_box_math = Math.floor(Math.random() * 6);
+    let random_box_math = Math.floor(Math.random() * 7);
     
     if (random_box_math === 0){
         window.location.replace("https://hakimoss.github.io/random_image/index.html")
@@ -58,10 +58,13 @@ function randomBtnFuntion(){
         window.location.replace("https://hakimoss.github.io/random_dice/index.html")
     } else if(random_box_math === 4) {
         window.location.replace("https://hakimoss.github.io/random_password/index.html")
-    } else {
+    } else if(random_box_math === 5){
         window.location.replace("https://hakimoss.github.io/random_idle/index.html")
+    } else {
+        window.location.replace("https://hakimoss.github.io/random_flag/index.html")
     }
 }
+
 
 // bouton retour
 
