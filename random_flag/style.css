@@ -118,8 +118,7 @@ body {
     top: 200px;
     height: 400px;
     width: 600px;
-    background-size: 100%;
-    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
     border: 1px solid black;

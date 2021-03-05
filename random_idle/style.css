@@ -126,7 +126,7 @@ body {
     width: 30px;
     border-radius: 50%;
     background-color: rgb(43, 172, 43);
-    opacity: 1;
+    opacity: 0;
 }
 
 /*                      Jeux ecran                    */
