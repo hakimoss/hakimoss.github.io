@@ -1,53 +1,74 @@
-// bouton RGB Color
 
-let btnRgb = document.getElementById("btn_rgb");
-btnRgb.addEventListener('click', fonctionBtnRgb);
 
-let valeurRgb = document.getElementById("valeur_rgb");
+// I885YR5LLHH7FSP3
+var monais1Final
 
-function fonctionBtnRgb(){
-    let random1 = Math.floor(Math.random() * 255);
-    let random2 = Math.floor(Math.random() * 255);
-    let random3 = Math.floor(Math.random() * 255);
+var monais2Final
 
-    let final = "rgb(" + random1 + "," + random2 + "," + random3 + ")";
-    valeur.innerText = "Hex color"
-    document.body.style.backgroundColor = final;
-    valeurRgb.innerText = final;
-    
+function functionMonais1(){
+    let monais1 = document.getElementById("monnais1")
+    let selected1 = monais1.selectedIndex;  
+    monais1.options[selected1].text;
+    monais1Final = monais1.value
+  
+    console.log(monais1Final)
+
 }
 
+function functionMonais2(){
+    let monais2 = document.getElementById("monnais2")
+    let selected2 = monais2.selectedIndex;  
+    monais2.options[selected2].text;
+    monais2Final = monais2.value
+  
+    console.log(monais2Final)
+
+}
+    
+
+  
 
 
-// bouton Hex color
 
-let btn = document.getElementById("btn_hex");
-btn.addEventListener('click', functionReload);
 
-let valeur = document.getElementById("valeur_hex");
+let callBackGetSuccess = function(data) {
+    console.log(data)
+    curencyValue = Math.round(data["Realtime Currency Exchange Rate"]["5. Exchange Rate"]*100)/100
+    $("#resulta").html(curencyValue + " " + data["Realtime Currency Exchange Rate"]["4. To_Currency Name"] + " pour un " + data["Realtime Currency Exchange Rate"]["2. From_Currency Name"])
 
-function fonctionBtn(length = 6){
-   
-    let chart = "ABCDEF0123456789";
-    let str = "";
-    let chartLength = chart.length;
+}
 
-    for (let i = 0; i < length; i++){
-        str += chart.charAt(Math.floor(Math.random() * chartLength))
+$("#new_monnais").click(function(){
+  
+    
+    let cur1 = monais1Final
+    
+
+    let cur2 = monais2Final
+    console.log(monais1Final)
+    console.log(monais2Final)
+  
+    let url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=" + cur1 + "&to_currency=" + cur2 + "&apikey=I885YR5LLHH7FSP3"
         
-    }  
-    return "#" + str;
+
+    console.log(url)
+
+    $.get(url, callBackGetSuccess).done(function() {
+        
+    })
+    .fail(function() {
+        alert("error");
+    })
+    .always(function() {
+        // alert( "finished")
+    })
+
     
-}
+})
 
-let hexresult = fonctionBtn(6);
 
-document.body.style.backgroundColor = hexresult;
-valeur.innerText = hexresult;
 
-function functionReload(){
-    window.location.replace("https://hakimoss.github.io/random_color/index.html")
-}
+
 /// btn random-box
 
 let btnRandomBox = document.getElementById("btn_random_box");
@@ -88,5 +109,10 @@ btnRetour.addEventListener('click', btnRetourFunction)
 function btnRetourFunction(){
     window.location.replace("https://hakimoss.github.io/")
 }
+
+
+
+
+
 
 
