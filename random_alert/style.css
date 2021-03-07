@@ -15,7 +15,7 @@ body {
 
 
 
-#btn_random_box, #new_recherche {
+#btn_random_box, #new_recherche, #normal {
     width: 400px;
     height: 160px;
     position: relative;
@@ -27,11 +27,12 @@ body {
     margin: 2px;
     box-sizing: border-box;
     transition: all 500ms ease; 
+
 }
 
 #btn_random_box {
     position: relative;
-    top: 448px;
+    top: 60px;
 }
 
 
@@ -111,8 +112,8 @@ body {
     border: 1px solid black;
     height: 400px;
     width: 1000px;
-    position: absolute;
-    top: 200px;
+    position: relative;
+    bottom: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +138,7 @@ body {
  position: relative;
  top: 20px;
 }
-p{
+p, h4{
     
     text-align: center;
 }
@@ -173,4 +174,21 @@ p{
     color: red;
     
     
+}
+#texte {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+}
+
+h4{
+    font-size: .8em;
+    
+}
+
+#normal {
+    position: absolute;
+    top: 800px;
+    opacity: 0;
 }
