@@ -46,9 +46,24 @@ let callBackGetSuccess = function(data) {
     $("#quatrieme").html(data.results[3].title)
     $("#cinquieme").html(data.results[4].title)
 
+    $("#suivant").click(function(){
+        $("#premier").html(data.results[5].title)
+        $("#deuxieme").html(data.results[6].title)
+        $("#troisieme").html(data.results[7].title)
+        $("#quatrieme").html(data.results[8].title)
+        $("#cinquieme").html(data.results[9].title)
+    })
+
+    $("#precedent").click(function(){
+        $("#premier").html(data.results[0].title)
+        $("#deuxieme").html(data.results[1].title)
+        $("#troisieme").html(data.results[2].title)
+        $("#quatrieme").html(data.results[3].title)
+        $("#cinquieme").html(data.results[4].title)
+    })
 }
 
-$("#new_entreprise").click(function(){
+$("#new_recherche").click(function(){
     chant = $("#chant_recherche")[0].value
     console.log($("#aliments").prop('checked'))
 
@@ -68,7 +83,7 @@ $("#new_entreprise").click(function(){
 
     
 
-    let url = "https://healthycanadians.gc.ca/recall-alert-rappel-avis/api/search?search=" + chant + "&lang=fr&cat=" + coche + "&lim=5"
+    let url = "https://healthycanadians.gc.ca/recall-alert-rappel-avis/api/search?search=" + chant + "&lang=fr&cat=" + coche + "&lim=10"
 
 
 

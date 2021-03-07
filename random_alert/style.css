@@ -15,7 +15,7 @@ body {
 
 
 
-#btn_random_box, #new_entreprise {
+#btn_random_box, #new_recherche {
     width: 400px;
     height: 160px;
     position: relative;
@@ -124,10 +124,53 @@ body {
     top: 100px;
 }
 
-#new_entreprise {
+#new_recherche {
     position:relative;
     top: 450px;
 }
 #aide {
     background-color: #eccf26;
+}
+
+#astuce {
+ border-bottom: 1px dashed black;
+ position: relative;
+ top: 20px;
+}
+p{
+    
+    text-align: center;
+}
+#suivant{
+    position: absolute;
+    align-self: flex-end;
+    top: 340px;
+    right: 70px;
+    
+    border-bottom: 2px solid black;
+    font-size: 1.0em;
+}
+
+#suivant:hover{
+    border-bottom: 2px solid red;
+    color: red;
+    
+    
+}
+
+#precedent{
+    position: absolute;
+    align-self: flex-start;
+    top: 340px;
+    left: 70px;
+    
+    border-bottom: 2px solid black;
+    font-size: 1.0em;
+}
+
+#precedent:hover{
+    border-bottom: 2px solid red;
+    color: red;
+    
+    
 }
