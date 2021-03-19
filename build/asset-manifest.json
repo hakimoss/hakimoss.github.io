@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.41b11911.chunk.css",
+    "main.js": "/static/js/main.58cd2fe4.chunk.js",
+    "main.js.map": "/static/js/main.58cd2fe4.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.bf5e0225.js",
+    "runtime-main.js.map": "/static/js/runtime-main.bf5e0225.js.map",
+    "static/js/2.9ab243a4.chunk.js": "/static/js/2.9ab243a4.chunk.js",
+    "static/js/2.9ab243a4.chunk.js.map": "/static/js/2.9ab243a4.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.41b11911.chunk.css.map": "/static/css/main.41b11911.chunk.css.map",
+    "static/js/2.9ab243a4.chunk.js.LICENSE.txt": "/static/js/2.9ab243a4.chunk.js.LICENSE.txt",
+    "static/media/annonce.7660ebc7.jpg": "/static/media/annonce.7660ebc7.jpg",
+    "static/media/arrival1.37b27302.png": "/static/media/arrival1.37b27302.png",
+    "static/media/arrival2.48f5fe59.png": "/static/media/arrival2.48f5fe59.png",
+    "static/media/arrival3.f3bb0e6e.png": "/static/media/arrival3.f3bb0e6e.png",
+    "static/media/baspage.a97e0b09.png": "/static/media/baspage.a97e0b09.png",
+    "static/media/categorie1.8b9abc4d.jpg": "/static/media/categorie1.8b9abc4d.jpg",
+    "static/media/categorie2.22b5f394.jpg": "/static/media/categorie2.22b5f394.jpg",
+    "static/media/homepage.d40f8535.jpg": "/static/media/homepage.d40f8535.jpg",
+    "static/media/vedette1.1c3a1620.jpg": "/static/media/vedette1.1c3a1620.jpg",
+    "static/media/vedette2.c1a9b4de.jpg": "/static/media/vedette2.c1a9b4de.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf5e0225.js",
+    "static/js/2.9ab243a4.chunk.js",
+    "static/css/main.41b11911.chunk.css",
+    "static/js/main.58cd2fe4.chunk.js"
+  ]
+}
